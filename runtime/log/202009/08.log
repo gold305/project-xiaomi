@@ -1,0 +1,77 @@
+---------------------------------------------------------------
+[ 2020-09-08T08:31:36+08:00 ] 127.0.0.1 GET www.xiaomi.com/admin/userle/index.html
+[运行时间：0.045347s] [吞吐率：22.05req/s] [内存消耗：531.23kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\xiaomi\git\state\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userle',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaomi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.xiaomi.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=oki703qji11mkbppomeueotf74; uLocale=zh_CN; cUserId=LqNN9yWgb9JFrZ5WQMZFYMTpZxI',
+)
+[ info ] [ PARAM ] array (
+  '/admin/userle/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Userle->index[ D:\wamp64\www\xiaomi\git\state\application\admin\controller\Userle.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp64\www\xiaomi\git\state\public/../application/admin\view\user\index.html [ array (
+  0 => 'zhi',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004216s ] mysql:host=127.0.0.1;dbname=backstagelibrary;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brary_note` [ RunTime:0.012981s ]
+[ sql ] [ SQL ] SELECT * FROM `brary_note` WHERE  `username` LIKE '%%' [ RunTime:0.002326s ]
+---------------------------------------------------------------
+[ 2020-09-08T08:31:48+08:00 ] 127.0.0.1 POST www.xiaomi.com/admin/userle/index/userle/text
+[运行时间：0.049213s] [吞吐率：20.32req/s] [内存消耗：532.60kb] [文件加载：54]
+[ info ] [ LANG ] D:\wamp64\www\xiaomi\git\state\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userle',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaomi.com',
+  'connection' => 'keep-alive',
+  'content-length' => '59',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://www.xiaomi.com',
+  'referer' => 'http://www.xiaomi.com/admin/userle/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=oki703qji11mkbppomeueotf74; uLocale=zh_CN; cUserId=LqNN9yWgb9JFrZ5WQMZFYMTpZxI',
+)
+[ info ] [ PARAM ] array (
+  '/admin/userle/index/userle/text' => '',
+  'user' => '泰勒斯威夫特',
+  'userle' => 'text',
+)
+[ info ] [ RUN ] app\admin\controller\Userle->index[ D:\wamp64\www\xiaomi\git\state\application\admin\controller\Userle.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp64\www\xiaomi\git\state\public/../application/admin\view\user\index.html [ array (
+  0 => 'zhi',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001109s ] mysql:host=127.0.0.1;dbname=backstagelibrary;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brary_note` [ RunTime:0.018213s ]
+[ sql ] [ SQL ] SELECT * FROM `brary_note` WHERE  `username` LIKE '%%' [ RunTime:0.000702s ]

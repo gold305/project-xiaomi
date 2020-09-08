@@ -1,0 +1,14 @@
+        .page span {
+            border: 2px solid white;
+            padding: 4px 10px;
+        }
+
+        .page span.curr {
+        	 border: 2px solid white;
+            background-color:#f1f1f1;
+            color: red;
+        }
+
+        a {
+            text-decoration: none;
+        }
