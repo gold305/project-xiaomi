@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\wamp64\www\xiaomi\git\state\public/../application/admin\view\.\index.html";i:1591689403;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\wamp64\www\xiaomi\git\state\public/../application/admin\view\.\index.html";i:1599622143;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <title>话费充值(管理后台系统)</title>
+    <title>小米商城(管理后台系统)</title>
 
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -77,7 +77,7 @@
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header" style="text-align:center"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    	<h2>话费充值(管理后台系统)</h2>
+                    	<h2>小米商城(管理后台系统)</h2>
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li class="dropdown hidden-xs">

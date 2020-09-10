@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\wamp64\www\xiaomi\git\state\public/../application/admin\view\login.html";i:1591600003;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\wamp64\www\xiaomi\git\state\public/../application/admin\view\login.html";i:1599622172;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <title>话费充值(管理后台系统)</title>
+    <title>小米商城(管理后台系统)</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link href="/static/admin/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
             <div class="col-sm-7">
                 <div class="signin-info">
                     <div class="logopanel m-b">
-                        <h1>话费充值登录页面(管理后台系统)</h1>
+                        <h1>小米商城登录页面(管理后台系统)</h1>
                     </div>
                 </div>
             </div>

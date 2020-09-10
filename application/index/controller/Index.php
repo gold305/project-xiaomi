@@ -101,7 +101,14 @@
                 $naDphone = input('naDtel');
                 $vicode = input('vicode');
                 
-                if(!captcha_check($vicode)){
+                $redis = new \Redis();
+                $redis->connect('127.0.0.1','6379');
+                $redis->auth('520111');                 //连接密码
+                $redis->select(5);                      //选择redis数据库
+                
+                $tel = $redis->get($naDphone);          //通过手机号获取验证码
+              
+                if( $vicode != $tel){
                     return Json(['code' => -3 , 'data' => '验证码错误']);
                 }
                 
@@ -139,13 +146,84 @@
             return $this->fetch('note/register');
         }
         
+        
+        /*
+         *  作者：李昊枕
+         *  审：李昊枕
+         *  时间：2020-09-10
+         */
+        
+        //获取验证码还有多少重发
+        public function vicodeResend()
+        {
+            if(request()->isAjax()){
+                $naDtel = input('post.naDtel');
+                
+                $redis = new \Redis();
+                $redis->connect('127.0.0.1','6379');
+                $redis->auth('520111');                 //连接密码
+                $redis->select(5);                      //选择redis数据库
+                
+                $tel = $redis->get($naDtel);            //通过手机号获取验证码
+                $countDown = $tel . 'lumme';            //获取存【验证码倒计时】的变量名
+                $results = $redis->get($countDown);
+                
+                if($results == 'cz'){
+                    $miao = $redis->TTl($countDown);
+                    return Json(['code' => 3 , 'msg' => $miao , 'data' => $naDtel]);
+                    
+                }else{
+                    return Json(['code' => -2 , 'msg' => '验证码不存在']); 
+                }
+            }
+        }
+        
+        
+        //获取验证码操作
+        public function vecode()
+        {
+            if(request()->isAjax()){
+                $naDyzm = input('post.naDyzm');
+                $naDtel = input('post.naDtel');
+                
+                if($naDyzm == '8dTe'){
+                    $randomNumber = str_pad(mt_rand(10, 999999), 6, "0", STR_PAD_BOTH);
+
+                    if(!empty($randomNumber)){
+                        $redis = new \Redis();
+                        $redis->connect('127.0.0.1','6379');
+                        $redis->auth('520111');                 //连接密码
+                        $redis->select(5);                      //选择redis数据库
+                        
+                        $countDown = $randomNumber . 'lumme';  
+                        
+                        $redis->set($naDtel,$randomNumber);
+                        $redis->EXPIRE($naDtel,300);
+                        
+                        $redis->set($countDown,'cz');
+                        $coutxn = $redis->EXPIRE($countDown,60);          //验证码发送成功，多少秒后重发
+                        
+                        $an = sendTemplateSMS($naDtel,array($randomNumber,5),1);
+                        if($an == '2003T'){
+                            return Json(['code' => 1 , 'msg' => $coutxn]);
+                        }else{
+                            return Json(['code' => -3 , 'msg' => 'result error!']);
+                        }
+                       
+                    }else{
+                        return Json(['code' => -1 , 'msg' => 'unable to parse error!']);
+                    }
+                } 
+            }
+        }
+        
+        
         //退出登录
         /*
          *  作者：欧阳磊
          *  审：李昊枕
          *  时间：2020-09-04
          */
-        
         public function logout(){
             Session::delete('phone');
             $this->redirect(url('index/index'));

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\wamp64\www\xiaomi\git\state\public/../application/index\view\login\login.html";i:1599206767;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\wamp64\www\xiaomi\git\state\public/../application/index\view\login\login.html";i:1599707165;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -29,7 +29,7 @@
 					<div class="username">密&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;<input class="shurukuang" type="password" id="naDpass" name="password" placeholder="请输入你的密码"/></div>
 					<div class="username">
                         <div class="left fl">验证码:&nbsp;<input class="yanzhengma" type="text" id="vicode" name="username" autocomplete="off" maxlength="5" placeholder="请输入验证码"/></div>
-						<div class="right fl"><img style="height: 43px;width: 100px"  src="<?php echo captcha_src(); ?>" class="tinVso"onclick="javascript:this.src='<?php echo captcha_src(); ?>?rand='+Math.random()" >  </div>
+						<div class="right fl"><img style="height: 43px;width: 100px" class="tinVso" src="<?php echo captcha_src(); ?>" onclick="javascript:this.src='<?php echo captcha_src(); ?>?rand='+Math.random()" ></div>
 						<div class="clear" id="text"></div><div class="imgst"></div>
 					</div>
 				</div>
@@ -43,7 +43,6 @@
 		<footer>
 			<div class="copyright">简体 | 繁体 | English | 常见问题</div>
 			<div class="copyright">小米公司版权所有-京ICP备10046444-<img src="/static/image/ghs.png" alt="">京公网安备11010802020134号-京ICP证110507号</div>
-
 		</footer>
 		
 		<script src="/static/js/jquery-3.4.1.min.js"></script>
