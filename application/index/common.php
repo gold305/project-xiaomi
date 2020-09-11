@@ -6,28 +6,28 @@
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
-// | Author: Á÷Äê <liu21st@gmail.com>
+// | Author: æµå¹´ <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// Ó¦ÓÃ¹«¹²ÎÄ¼ş
+// åº”ç”¨å…¬å…±æ–‡ä»¶
 
-//µÇÂ¼£¬µÇ³öÒ³Ãæ
+//ç™»å½•ï¼Œç™»å‡ºé¡µé¢
 function userdetails($operate = [],$ter){
     $option = <<<EOT
     
             <ul class="anty">
                 <li>|</li>
-                <li class='ana' ><a href="">ÏûÏ¢Í¨Öª</a></li>
+                <li class='ana' ><a href="">æ¶ˆæ¯é€šçŸ¥</a></li>
                 <li>|</li>
-                <li class='bnb' ><a href="/index/head/order" >ÎÒµÄ¶©µ¥</a></li>
+                <li class='bnb' ><a href="/index/head/order" >æˆ‘çš„è®¢å•</a></li>
            </ul>
             <div class="dropdown">
 			  <a class="dropbtn">$ter</a>
 			  <div class="dropdown-content">
-			    <a href="/index/head/selfInfo">¸öÈËÖĞĞÄ</a>
-			    <a href="#">ÆÀ¼ÛÉ¹µ¥</a>
-			    <a href="#">ÎÒµÄÏ²»¶</a>
-			    <a href="/index/index/logout">ÍË³öµÇÂ¼</a>
+			    <a href="/index/head/selfInfo">ä¸ªäººä¸­å¿ƒ</a>
+			    <a href="#">è¯„ä»·æ™’å•</a>
+			    <a href="#">æˆ‘çš„å–œæ¬¢</a>
+			    <a href="/index/index/logout">é€€å‡ºç™»å½•</a>
 			  </div>
 			</div>
 EOT;
@@ -40,15 +40,15 @@ function userdeta($operate = [],$ter){
     
             <ul class="antys">
                 <li>|</li>
-                <li class='bnb' ><a href="/index/head/order" >ÎÒµÄ¶©µ¥</a></li>
+                <li class='bnb' ><a href="/index/head/order" >æˆ‘çš„è®¢å•</a></li>
            </ul>
             <div class="dropdowns">
 			  <a class="dropbtns">$ter</a>
 			  <div class="dropdown-contents">
-			    <a href="/index/head/selfInfo">¸öÈËÖĞĞÄ</a>
-			    <a href="#">ÆÀ¼ÛÉ¹µ¥</a>
-			    <a href="#">ÎÒµÄÏ²»¶</a>
-			    <a href="/index/index/logout">ÍË³öµÇÂ¼</a>
+			    <a href="/index/head/selfInfo">ä¸ªäººä¸­å¿ƒ</a>
+			    <a href="#">è¯„ä»·æ™’å•</a>
+			    <a href="#">æˆ‘çš„å–œæ¬¢</a>
+			    <a href="/index/index/logout">é€€å‡ºç™»å½•</a>
 			  </div>
 			</div>
 EOT;
@@ -60,11 +60,11 @@ function weilog(){
     
     $option = <<<EOT
         <ul>
-        <li><a href="/index/index/deng" >µÇÂ¼</a></li>
+        <li><a href="/index/index/deng" >ç™»å½•</a></li>
         <li>|</li>
-        <li><a href="/index/index/note" >×¢²á</a></li>
+        <li><a href="/index/index/note" >æ³¨å†Œ</a></li>
         <li>|</li>
-        <li><a href="">ÏûÏ¢Í¨Öª</a></li>
+        <li><a href="">æ¶ˆæ¯é€šçŸ¥</a></li>
         </ul>
 EOT;
     
@@ -74,38 +74,38 @@ EOT;
 include_once("../application/extra/CCP/SDK/CCPRestSDK.php");
 
 /**
- * ·¢ËÍÄ£°å¶ÌĞÅ
- * @param to ÊÖ»úºÅÂë¼¯ºÏ,ÓÃÓ¢ÎÄ¶ººÅ·Ö¿ª
- * @param datas ÄÚÈİÊı¾İ ¸ñÊ½ÎªÊı×é ÀıÈç£ºarray('Marry','Alon')£¬Èç²»ĞèÌæ»»ÇëÌî null
- * @param $tempId Ä£°åId
+ * å‘é€æ¨¡æ¿çŸ­ä¿¡
+ * @param to æ‰‹æœºå·ç é›†åˆ,ç”¨è‹±æ–‡é€—å·åˆ†å¼€
+ * @param datas å†…å®¹æ•°æ® æ ¼å¼ä¸ºæ•°ç»„ ä¾‹å¦‚ï¼šarray('Marry','Alon')ï¼Œå¦‚ä¸éœ€æ›¿æ¢è¯·å¡« null
+ * @param $tempId æ¨¡æ¿Id
  */
 function sendTemplateSMS($to,$datas,$tempId)
 {
-    //Ö÷ÕÊºÅ
+    //ä¸»å¸å·
     $accountSid= '8a216da8746c6ee4017471d256550288';
     
-    //Ö÷ÕÊºÅToken
+    //ä¸»å¸å·Token
     $accountToken= '6ef975b9a84e4fd1ad04667b73c297a4';
     
-    //Ó¦ÓÃId
+    //åº”ç”¨Id
     $appId='8a216da8746c6ee4017471d25740028f';
     
-    //ÇëÇóµØÖ·£¬¸ñÊ½ÈçÏÂ£¬²»ĞèÒªĞ´https://
+    //è¯·æ±‚åœ°å€ï¼Œæ ¼å¼å¦‚ä¸‹ï¼Œä¸éœ€è¦å†™https://
     $serverIP='app.cloopen.com';
     
-    //ÇëÇó¶Ë¿Ú
+    //è¯·æ±‚ç«¯å£
     $serverPort='8883';
     
-    //REST°æ±¾ºÅ
+    //RESTç‰ˆæœ¬å·
     $softVersion='2013-12-26';
     
-    // ³õÊ¼»¯REST SDK
+    // åˆå§‹åŒ–REST SDK
     //global $accountSid,$accountToken,$appId,$serverIP,$serverPort,$softVersion;
     $rest = new REST($serverIP,$serverPort,$softVersion);
     $rest->setAccount($accountSid,$accountToken);
     $rest->setAppId($appId);
     
-    // ·¢ËÍÄ£°å¶ÌĞÅ
+    // å‘é€æ¨¡æ¿çŸ­ä¿¡
     //echo "Sending TemplateSMS to $to <br/>";
     $result = $rest->sendTemplateSMS($to,$datas,$tempId);
     if($result == NULL ) {
@@ -114,15 +114,15 @@ function sendTemplateSMS($to,$datas,$tempId)
     if($result->statusCode!=0) {
         //echo "error code :" . $result->statusCode . "<br>";
         //echo "error msg :" . $result->statusMsg . "<br>";
-        //TODO Ìí¼Ó´íÎó´¦ÀíÂß¼­
+        //TODO æ·»åŠ é”™è¯¯å¤„ç†é€»è¾‘
     }else{
         //echo "Sendind TemplateSMS success!<br/>";
-        // »ñÈ¡·µ»ØĞÅÏ¢
+        // è·å–è¿”å›ä¿¡æ¯
         //$smsmessage = $result->TemplateSMS;
         //echo "dateCreated:".$smsmessage->dateCreated."<br/>";
         //echo "smsMessageSid:".$smsmessage->smsMessageSid."<br/>";
         return '2003T';
-        //TODO Ìí¼Ó³É¹¦´¦ÀíÂß¼­
+        //TODO æ·»åŠ æˆåŠŸå¤„ç†é€»è¾‘
     }
     
 }
